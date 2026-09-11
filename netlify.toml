@@ -1,12 +1,13 @@
 # Netlify build + deploy config for the statically generated Nuxt site.
-# `nuxt generate` (Nitro static preset) writes the deployable site to
-# .output/public, so that is what Netlify publishes. (Locally, `dist` is a
-# convenience symlink to the same folder, but it is not created on a fresh
-# Netlify build, so we publish the real path here.)
+# Netlify publishes `dist`. On Netlify's build image Nitro auto-detects the
+# platform and uses its `netlify-static` preset, which writes the generated
+# site to `dist/` (not `.output/public`, which is what the plain `static`
+# preset writes locally). Locally, `dist` is a symlink to `.output/public`, so
+# the same path works in both places.
 
 [build]
   command = "npm run generate"
-  publish = ".output/public"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
