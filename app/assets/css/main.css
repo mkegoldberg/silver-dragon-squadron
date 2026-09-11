@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "animate.css/animate.min.css";
+
+/*
+  Design tokens for the Silver Dragon Squadron rebuild.
+
+  These values are taken from the live WordPress theme (portthemetrust):
+  light gray page (#f1f0f0), gray body text (#6a6a6a), teal accent
+  (#52a3ba, hover #4290ae), white cards/bars, and Helvetica/Arial typography
+  (the live theme enqueues Droid Serif/PT Sans but never applies them in CSS;
+  body is set to "Helvetica Neue", Helvetica, Arial and headings inherit it).
+
+  NOTE on names: token names are kept from the original scaffold so components
+  don't have to change (per CLAUDE.md). Their VALUES now describe a LIGHT theme,
+  so read them by ROLE, not literally:
+    ink        -> page background (light)
+    ink-soft   -> raised surface / cards / bars (white)
+    steel      -> borders / dividers (light gray)
+    silver     -> primary / heading text (dark)
+    silver-dim -> secondary / body text (mid gray)
+    sky        -> teal accent (links, active state, hover targets)
+*/
+@theme {
+  --color-ink: #f1f0f0;          /* page background (light gray) */
+  --color-ink-soft: #ffffff;     /* cards / panels / quote bar */
+  --color-steel: #e3e3e0;        /* borders, dividers */
+  --color-steel-strong: #dcdcdc; /* hover state on steel surfaces (gallery tabs) */
+  --color-silver: #333333;       /* primary + heading text (dark) */
+  --color-silver-dim: #6a6a6a;   /* secondary / body text */
+  --color-sky: #52a3ba;          /* teal accent (links, buttons) */
+  --color-sky-strong: #4290ae;   /* accent hover */
+  --color-lagoon: #00c1cf;       /* WPBakery "turquoise" (Canopy gallery tabs) */
+  --color-lagoon-strong: #00a4b0;/* its hover/border shade */
+  --color-paper: #ffffff;        /* light sections */
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --radius-card: 2px;            /* sharp, near-square corners (matches theme) */
+  --radius-tab: 5px;             /* gallery tab corners (WPBakery vc_tta-shape-rounded) */
+}
+
+html {
+  background-color: var(--color-ink);
+  color: var(--color-silver-dim);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slide-out nav transition (replaces the old jQuery pageslide behavior). */
+.slide-nav-enter-active,
+.slide-nav-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-nav-enter-from,
+.slide-nav-leave-to {
+  transform: translateX(100%);
+}
+
+/*
+  Scroll-reveal support.
+  --animate-duration tunes all animate.css effects to the ~0.8s feel measured
+  from the original site. `.reveal-hidden` is applied client-side only (by
+  useScrollReveal) so server-rendered / mobile / reduced-motion HTML is never
+  hidden and can never get stuck invisible.
+*/
+:root {
+  --animate-duration: 0.8s;
+}
+.reveal-hidden {
+  opacity: 0;
+}

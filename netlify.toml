@@ -1,0 +1,59 @@
+# Netlify build + deploy config for the statically generated Nuxt site.
+# `nuxt generate` (Nitro static preset) writes the deployable site to
+# .output/public, so that is what Netlify publishes. (Locally, `dist` is a
+# convenience symlink to the same folder, but it is not created on a fresh
+# Netlify build, so we publish the real path here.)
+
+[build]
+  command = "npm run generate"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Preserve inbound links from the old WordPress URLs.
+
+# Renamed project slugs (old demo slugs -> clean slugs).
+[[redirects]]
+  from = "/project/example-project-4"
+  to = "/project/flight-controls"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project/example-project-3"
+  to = "/project/avionics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/project/example_one"
+  to = "/project/fuselage"
+  status = 301
+  force = true
+
+# Renamed top-level page slugs.
+[[redirects]]
+  from = "/about-steve-kim"
+  to = "/about-steve"
+  status = 301
+  force = true
+
+# The blog and comments were removed (read-only visual site).
+# Forward any old blog / category / feed links to the home page so they do not 404.
+[[redirects]]
+  from = "/hello-world"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301

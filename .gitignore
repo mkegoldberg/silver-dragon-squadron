@@ -1,0 +1,14 @@
+# Nuxt / Node
+node_modules
+.nuxt
+.output
+.data
+dist
+.env
+.DS_Store
+# Plan/spec documents stay local
+docs/superpowers/
+*.log
+.netlify
+# Local Claude Code config (machine-specific paths)
+.claude/
