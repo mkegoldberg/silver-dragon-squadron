@@ -36,7 +36,7 @@
       </div>
     </section>
 
-    <!-- An Aviators Vision: blueprint photo with parallax + dark overlay. -->
+    <!-- An Aviator's Vision: blueprint photo with parallax + dark overlay. -->
     <section
       class="relative bg-scroll bg-cover bg-center md:bg-fixed"
       style="background-image: url('/vision-blueprints.jpg')"
@@ -44,7 +44,7 @@
       <div class="absolute inset-0 bg-black/50" />
       <div class="relative mx-auto max-w-6xl px-4 py-40">
         <div class="mb-12 text-center">
-          <h2 class="font-display uppercase tracking-wide text-4xl text-white">An Aviators Vision</h2>
+          <h2 class="font-display uppercase tracking-wide text-4xl text-white">An Aviator's Vision</h2>
           <p class="mt-1 text-white/60">A little about this project</p>
         </div>
 

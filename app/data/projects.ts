@@ -240,16 +240,6 @@ export const projects: Project[] = [
     categories: ['Transport'],
     tabs: [
       {
-        label: 'Photos',
-        icon: 'camera',
-        images: [
-          { src: 'sds/the-move/IMG_0219' },
-          { src: 'sds/the-move/IMG_0218' },
-          { src: 'sds/the-move/IMG_0217' },
-          { src: 'sds/the-move/IMG_0216' },
-        ],
-      },
-      {
         label: 'Videos',
         icon: 'video',
         videos: [
@@ -258,6 +248,16 @@ export const projects: Project[] = [
           { id: 'BqqJ4XeYW0c', title: 'Pulling Up' },
           { id: 'YcTd0r_4CjE', title: 'Off Loading' },
           { id: 'g1OuAdbie7M', title: 'New Home' },
+        ],
+      },
+      {
+        label: 'Photos',
+        icon: 'camera',
+        images: [
+          { src: 'sds/the-move/IMG_0219' },
+          { src: 'sds/the-move/IMG_0218' },
+          { src: 'sds/the-move/IMG_0217' },
+          { src: 'sds/the-move/IMG_0216' },
         ],
       },
     ],
