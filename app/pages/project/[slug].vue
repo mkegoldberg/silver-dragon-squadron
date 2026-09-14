@@ -12,7 +12,7 @@
           {{ prev?.title }}
         </NuxtLink>
         <NuxtLink
-          to="/sample-page"
+          to="/piece-by-piece"
           class="inline-flex items-center text-silver-dim hover:text-sky"
           aria-label="All projects"
           title="All projects"
@@ -69,7 +69,7 @@
 
     <div v-else class="text-center py-24">
       <p class="text-silver-dim">Project not found.</p>
-      <NuxtLink to="/sample-page" class="text-sky">Back to Piece By Piece</NuxtLink>
+      <NuxtLink to="/piece-by-piece" class="text-sky">Back to Piece By Piece</NuxtLink>
     </div>
   </div>
 </template>

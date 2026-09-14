@@ -40,6 +40,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/sample-page"
+  to = "/piece-by-piece"
+  status = 301
+  force = true
+
 # The blog and comments were removed (read-only visual site).
 # Forward any old blog / category / feed links to the home page so they do not 404.
 [[redirects]]

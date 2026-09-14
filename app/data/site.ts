@@ -5,7 +5,7 @@ export const nav = [
   { label: 'About Steve', to: '/about-steve' },
   { label: 'About The Plane', to: '/about-the-plane' },
   { label: 'What This Project Means to Steve', to: '/what-this-project-means-to-steve' },
-  { label: 'Piece By Piece', to: '/sample-page' },
+  { label: 'Piece By Piece', to: '/piece-by-piece' },
 ]
 
 export const site = {

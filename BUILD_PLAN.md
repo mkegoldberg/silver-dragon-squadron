@@ -43,7 +43,7 @@ app/
   layouts/default.vue          header + slide nav + footer
   pages/
     index.vue                  home (hero, portfolio preview, about cards)
-    sample-page.vue            "Piece By Piece" portfolio index + category filter
+    piece-by-piece.vue         "Piece By Piece" portfolio index + category filter
     project/[slug].vue         project gallery + prev/next nav
     about-steve-kim.vue
     about-the-plane.vue

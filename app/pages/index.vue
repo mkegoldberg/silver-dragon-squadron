@@ -23,7 +23,7 @@
             <p class="text-silver-dim mt-1">View each piece of the project</p>
           </div>
           <NuxtLink
-            to="/sample-page"
+            to="/piece-by-piece"
             class="inline-block border border-sky px-5 py-2 text-sm uppercase tracking-wide text-sky transition hover:bg-sky hover:text-white"
           >
             View All
